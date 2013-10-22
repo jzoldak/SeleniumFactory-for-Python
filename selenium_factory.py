@@ -2,8 +2,8 @@ import os
 from selenium import webdriver
 from selenium import selenium
 
-from ParseSauceURL import *
-from SauceRest import *
+from parse_sauce_url import *
+from sauce_rest import *
 
 """
 This class wraps a webdriver/selenium instance.  It delegates most method calls to the underlying webdriver/selenium
@@ -48,15 +48,15 @@ class Wrapper:
         return setattr(self.selenium, attr, value)
 
 """
-  Simple interface factory to create Selenium objects, inspired by the SeleniumFactory interface 
+  Simple interface factory to create Selenium objects, inspired by the SeleniumFactory interface
   from https://github.com/infradna/selenium-client-factory for Java.
- 
+
   <p>
   Compared to directly initializing {@link com.thoughtworks.selenium.DefaultSelenium}, this additional indirection
   allows the build script or a CI server to control how you connect to the selenium.
   This makes it easier to run the same set of tests in different environments without
   modifying the test code.
- 
+
   <p>
   This is analogous to how you connect to JDBC &mdash; you normally don't directly
   instantiate a specific driver, and instead you do {@link DriverManager#getConnection(String)}.

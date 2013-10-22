@@ -3,8 +3,8 @@ import unittest, time, re
 import os
 import json
 
-from ParseSauceURL import *
-from SeleniumFactory import *
+from parse_sauce_url import *
+from selenium_factory import *
 
 """
 """
